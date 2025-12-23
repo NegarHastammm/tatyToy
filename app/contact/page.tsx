@@ -1,70 +1,82 @@
-
 // app/contact/page.tsx
 export default function ContactPage() {
   return (
-    <div className="container max-w-screen-md py-10">
-      <h1 className="text-2xl font-semibold text-neutral-900">
-        تماس با ما
-      </h1>
-      <p className="mt-3 text-sm leading-relaxed text-neutral-700">
-        برای ثبت سفارش، مشاوره یا دریافت اطلاعات بیشتر، از یکی از روش‌های زیر
-        با ما در ارتباط باشید.
-      </p>
-
-      <div className="mt-6 grid gap-6 md:grid-cols-2">
-        <div className="space-y-3 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-800">
-          <p className="font-medium text-neutral-900">
-            اطلاعات تماس
+    <div className="container py-12 min-h-screen">
+      <div className="max-w-4xl mx-auto space-y-12">
+        {/* Header */}
+        <div className="text-center space-y-4 pt-8">
+          <h1 className="text-3xl font-bold text-[var(--brand-dark)]">
+            تماس با ما
+          </h1>
+          <div className="mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-[var(--brand-red)] via-[var(--brand-yellow)] to-[var(--brand-green)]" />
+          <p className="text-lg text-neutral-600 max-w-lg mx-auto">
+            برای سفارش، مشاوره یا سوالات خود با ما تماس بگیرید
           </p>
-          <p>تلفن: ۰۹xx xxx xxxx</p>
-          <p>ایمیل: example@email.com</p>
-          <p>آدرس: شهر، منطقه، توضیح کوتاه آدرس</p>
         </div>
 
-        <div className="space-y-3 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-800">
-          <p className="font-medium text-neutral-900">
-            شبکه‌های اجتماعی
-          </p>
-          <p>اینستاگرام: @your_instagram</p>
-          <p>واتساپ: لینک مستقیم یا شماره</p>
-          <p>تلگرام: @your_telegram</p>
-        </div>
-      </div>
+        {/* اطلاعات تماس - طراحی کارت‌های سفید */}
+        <div className="grid gap-8 lg:grid-cols-3">
+          {/* کارت تلفن */}
+          <div className="group rounded-3xl bg-white/80 backdrop-blur-xl p-8 border border-neutral-200/50 shadow-xl hover:shadow-2xl hover:shadow-[var(--brand-blue)]/20 transition-all duration-500 hover:-translate-y-2">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand-blue)] mb-6 mx-auto text-white text-xl font-bold">
+              📞
+            </div>
+            <h3 className="text-center text-xl font-bold text-[var(--brand-dark)] mb-4">تماس تلفنی</h3>
+            <div className="text-center space-y-2">
+              <a 
+                href="tel:09XXXXXXXXX" 
+                className="block text-2xl font-bold text-[var(--brand-dark)] hover:text-[var(--brand-blue)] transition-colors"
+              >
+                ۰۹xx xxx xxxx
+              </a>
+              <p className="text-sm text-neutral-600">هر روز ۸ صبح تا ۱۰ شب</p>
+            </div>
+          </div>
 
-      {/* فرم ساده (فعلاً بدون بک‌اند) */}
-      <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-5">
-        <p className="mb-4 text-sm font-medium text-neutral-900">
-          فرم ارسال پیام
-        </p>
-        <form className="grid gap-4 text-sm">
-          <div className="grid gap-1">
-            <label className="text-neutral-700">نام و نام خانوادگی</label>
-            <input
-              type="text"
-              className="h-10 rounded-lg border border-neutral-300 px-3 text-sm outline-none ring-0 transition focus:border-neutral-500"
-            />
+          {/* کارت واتساپ */}
+          <div className="group rounded-3xl bg-white/80 backdrop-blur-xl p-8 border border-neutral-200/50 shadow-xl hover:shadow-2xl hover:shadow-[var(--brand-green)]/20 transition-all duration-500 hover:-translate-y-2">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand-green)] mb-6 mx-auto text-white text-xl font-bold">
+              💬
+            </div>
+            <h3 className="text-center text-xl font-bold text-[var(--brand-dark)] mb-4">واتساپ</h3>
+            <div className="text-center space-y-2">
+              <a 
+                href="https://wa.me/09XXXXXXXXX" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-2xl font-bold text-[var(--brand-dark)] hover:text-[var(--brand-green)] transition-colors"
+              >
+                پیام مستقیم
+              </a>
+              <p className="text-sm text-neutral-600">پاسخگویی فوری</p>
+            </div>
           </div>
-          <div className="grid gap-1">
-            <label className="text-neutral-700">شماره تماس</label>
-            <input
-              type="tel"
-              className="h-10 rounded-lg border border-neutral-300 px-3 text-sm outline-none ring-0 transition focus:border-neutral-500"
-            />
+
+          {/* کارت ایمیل */}
+          <div className="group rounded-3xl bg-white/80 backdrop-blur-xl p-8 border border-neutral-200/50 shadow-xl hover:shadow-2xl hover:shadow-[var(--brand-red)]/20 transition-all duration-500 hover:-translate-y-2">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand-red)] mb-6 mx-auto text-white text-xl font-bold">
+              ✉️
+            </div>
+            <h3 className="text-center text-xl font-bold text-[var(--brand-dark)] mb-4">ایمیل</h3>
+            <div className="text-center space-y-2">
+              <a 
+                href="mailto:info@brand.com" 
+                className="block text-lg font-semibold text-[var(--brand-dark)] hover:text-[var(--brand-red)] transition-colors break-all"
+              >
+                info@brand.com
+              </a>
+              <p className="text-sm text-neutral-600">پاسخ در ۲۴ ساعت</p>
+            </div>
           </div>
-          <div className="grid gap-1">
-            <label className="text-neutral-700">پیام شما</label>
-            <textarea
-              rows={4}
-              className="rounded-lg border border-neutral-300 px-3 py-2 text-sm outline-none ring-0 transition focus:border-neutral-500"
-            />
-          </div>
-          <button
-            type="button"
-            className="inline-flex h-10 items-center justify-center rounded-lg bg-neutral-900 px-4 text-sm font-medium text-white transition hover:bg-neutral-800"
-          >
-            ارسال پیام (نمونه)
-          </button>
-        </form>
+        </div>
+
+        {/* آدرس */}
+        <div className="rounded-3xl bg-gradient-to-r from-[var(--brand-blue)]/5 to-[var(--brand-yellow)]/5 p-10 border border-[var(--brand-blue)]/20 shadow-xl text-center">
+          <h3 className="text-2xl font-bold text-[var(--brand-dark)] mb-4">دفتر مرکزی</h3>
+          <p className="text-lg text-neutral-700 leading-relaxed max-w-2xl mx-auto">
+            تهران، خیابان ولیعصر، بالاتر از پارک ساعی، پلاک ۱۲۳
+          </p>
+        </div>
       </div>
     </div>
   )

@@ -35,9 +35,10 @@ export function ProductCard({ product }: ProductCardProps) {
           <span className="text-sm font-bold text-neutral-900">
             {product.price.toLocaleString("fa-IR")} تومان
           </span>
-          <span className="rounded-full bg-neutral-100 px-2 py-1 text-[10px] text-neutral-600">
-            {product.category}
-          </span>
+        <span className="chip bg-brand-blue/10 text-[10px] text-brand-dark">
+  {product.category}
+</span>
+
         </div>
       </div>
     </Link>
