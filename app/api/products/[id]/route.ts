@@ -55,7 +55,7 @@ export async function PUT(request: Request, ctx: Ctx) {
             description?: string | null;
             price?: number;
             category?: string | null;
-            tag?: string[] | null;
+            tag?: string | null;          // ✅ تک‌مقداری
             image_url?: string | null;
         } = body;
 
@@ -67,10 +67,7 @@ export async function PUT(request: Request, ctx: Ctx) {
             tag === undefined &&
             image_url === undefined
         ) {
-            return NextResponse.json(
-                { ok: false, error: "No fields provided to update" },
-                { status: 400 }
-            );
+            return NextResponse.json({ ok: false, error: "No fields provided to update" }, { status: 400 });
         }
 
         const { rows } = await pool.query(
@@ -105,7 +102,7 @@ export async function PUT(request: Request, ctx: Ctx) {
 
         return NextResponse.json({
             ok: true,
-            message: `محصول «${updated.name}» با موفقیت ویرایش شد`,
+            message: `محصول «${updated.name}» ویرایش شد`,
             data: updated,
         });
     } catch (error) {
@@ -123,10 +120,7 @@ export async function DELETE(_: Request, ctx: Ctx) {
     }
 
     try {
-        const { rows } = await pool.query(
-            "DELETE FROM products WHERE id = $1 RETURNING id, name",
-            [id]
-        );
+        const { rows } = await pool.query("DELETE FROM products WHERE id = $1 RETURNING id, name", [id]);
 
         const deleted = rows[0];
         if (!deleted) {

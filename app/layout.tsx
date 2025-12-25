@@ -1,6 +1,6 @@
 // app/layout.tsx
 import type { Metadata } from "next"
-import "./globals.css"
+import "./globals.css";
 import { Header } from "./components/ui/Header"
 
 export const metadata: Metadata = {
