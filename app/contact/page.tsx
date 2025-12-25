@@ -53,28 +53,43 @@ export default function ContactPage() {
           </div>
 
           {/* کارت ایمیل */}
-          <div className="group rounded-3xl bg-white/80 backdrop-blur-xl p-8 border border-neutral-200/50 shadow-xl hover:shadow-2xl hover:shadow-[var(--brand-red)]/20 transition-all duration-500 hover:-translate-y-2">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand-red)] mb-6 mx-auto text-white text-xl font-bold">
-              ✉️
-            </div>
-            <h3 className="text-center text-xl font-bold text-[var(--brand-dark)] mb-4">ایمیل</h3>
-            <div className="text-center space-y-2">
-              <a 
-                href="mailto:info@brand.com" 
-                className="block text-lg font-semibold text-[var(--brand-dark)] hover:text-[var(--brand-red)] transition-colors break-all"
-              >
-                info@brand.com
-              </a>
-              <p className="text-sm text-neutral-600">پاسخ در ۲۴ ساعت</p>
-            </div>
-          </div>
+       
+<div className="group rounded-3xl bg-white/80 backdrop-blur-xl p-8 border border-neutral-200/50 shadow-xl hover:shadow-2xl hover:shadow-[var(--brand-blue)]/20 transition-all duration-500 hover:-translate-y-2">
+  {/* آیکون روبیکا استایلیزه شده */}
+  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand-blue)] mb-6 mx-auto">
+    <div className="grid h-10 w-10 grid-cols-2 gap-0.5 rounded-2xl overflow-hidden bg-white">
+      <span className="bg-[var(--brand-blue)]" />
+      <span className="bg-[var(--brand-yellow)]" />
+      <span className="bg-[var(--brand-green)]" />
+      <span className="bg-[var(--brand-red)]" />
+    </div>
+  </div>
+
+  <h3 className="text-center text-xl font-bold text-[var(--brand-dark)] mb-4">
+    روبیکا
+  </h3>
+  <div className="text-center space-y-2">
+    <a
+      href="https://rubika.ir/YourRubikaID"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block text-lg font-semibold text-[var(--brand-dark)] hover:text-[var(--brand-blue)] transition-colors break-all"
+    >
+      @YourRubikaID
+    </a>
+    <p className="text-sm text-neutral-600">
+      پیام مستقیم در روبیکا
+    </p>
+  </div>
+</div>
+
         </div>
 
         {/* آدرس */}
         <div className="rounded-3xl bg-gradient-to-r from-[var(--brand-blue)]/5 to-[var(--brand-yellow)]/5 p-10 border border-[var(--brand-blue)]/20 shadow-xl text-center">
           <h3 className="text-2xl font-bold text-[var(--brand-dark)] mb-4">دفتر مرکزی</h3>
           <p className="text-lg text-neutral-700 leading-relaxed max-w-2xl mx-auto">
-            تهران، خیابان ولیعصر، بالاتر از پارک ساعی، پلاک ۱۲۳
+            تهران
           </p>
         </div>
       </div>

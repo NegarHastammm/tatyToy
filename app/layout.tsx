@@ -32,9 +32,7 @@ export default function RootLayout({
                 <a href="https://wa.me/09XXXXXXXXX" target="_blank" rel="noopener noreferrer" className="rounded-2xl bg-[var(--brand-green)] px-4 py-1.5 font-semibold text-white shadow-sm hover:opacity-90 transition-all">
                   واتساپ
                 </a>
-                <a href="tel:09XXXXXXXXX" className="rounded-2xl border border-neutral-200 bg-white px-4 py-1.5 font-semibold text-[var(--brand-dark)] hover:bg-[var(--brand-yellow)]/30 transition-all">
-                  تماس
-                </a>
+              
               </div>
             </div>
           </div>

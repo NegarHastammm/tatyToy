@@ -18,12 +18,7 @@ export default function HomePage() {
       {/* ۸ ساب‌تایتل با رنگ‌های پاستلی */}
    
 <section className="mb-20">
-  <div className="mb-10 text-center">
-    <h2 className="text-3xl font-bold text-[var(--brand-dark)] mb-3">چرا ما؟</h2>
-    <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-      ویژگی‌های منحصر به فرد محصولات و خدمات ما
-    </p>
-  </div>
+  
 
   <div className="grid gap-4 md:gap-6 md:grid-cols-3 lg:grid-cols-3">
     {/* همه ۹ کارت - کوچک‌تر */}
