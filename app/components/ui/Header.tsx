@@ -1,24 +1,18 @@
 // components/ui/Header.tsx
 import Link from "next/link"
-
+import ZigzagLogo from "./ZigzagLogo"
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-neutral-200/70 bg-white/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full h-20 border-b border-neutral-200/70 bg-white/80 backdrop-blur-xl">
       <div className="container flex h-14 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          {/* لوگو ۴ رنگ */}
-          <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[var(--brand-bg)] p-0.5 shadow-sm">
-            <div className="grid h-full w-full grid-cols-2 gap-0.5 rounded-2xl overflow-hidden">
-              <div className="rounded-tl-2xl bg-[var(--brand-blue)]" />
-              <div className="rounded-tr-2xl bg-[var(--brand-yellow)]" />
-              <div className="rounded-bl-2xl bg-[var(--brand-green)]" />
-              <div className="rounded-br-2xl bg-[var(--brand-red)]" />
-            </div>
-          </div>
-          <span className="text-sm font-semibold tracking-tight text-[var(--brand-dark)]">
-            نام برند
+       <nav className="p-4 flex justify-between items-center">
+      
+        <ZigzagLogo size="w-15 h-15" speed={1.5} dist={20} step={10} />
+          <span className="text-2xl font-semibold tracking-tight text-[var(--brand-dark)]">
+            Taty
           </span>
-        </Link>
+          </nav>
+        
 
         <nav className="flex items-center gap-6 text-sm font-medium text-neutral-700">
           <Link href="/" className="hover:text-[var(--brand-dark)] transition-colors">
