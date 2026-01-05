@@ -1,21 +1,9 @@
-// app/page.tsx
+// app/page.tsx - همه اسامی سه نقطه
 'use client';
 import Link from 'next/link'
 import sectionsData from './data/sections'
 
 export default function HomePage() {
-  const sectionImages = {
-    posters: '/images/posters/nautilus.jpg',
-    frames: '/images/frames/wood-50x70.jpg',
-    canvases: '/images/canvases/landscape.jpg',
-    stickers: '/images/stickers/wave.jpg',
-    mugs: '/images/mugs/ocean.jpg',
-    tshirts: '/images/tshirts/wave.jpg',
-    'phone-cases': '/images/phone-cases/iphone-wave.jpg',
-    wallets: '/images/wallets/ocean-leather.jpg',
-    notebooks: '/images/notebooks/a5-ocean.jpg'
-  }
-
   return (
     <div
       style={{
@@ -29,7 +17,7 @@ export default function HomePage() {
         flexDirection: 'column',
       }}
     >
-      {/* Hero جمع‌وجورتر */}
+      {/* Hero */}
       <div
         style={{
           textAlign: 'center',
@@ -46,7 +34,7 @@ export default function HomePage() {
             lineHeight: 1.15,
           }}
         >
-          محصولات اقیانوسی
+          محصولات 
         </h1>
         <p
           style={{
@@ -56,11 +44,11 @@ export default function HomePage() {
             lineHeight: 1.3,
           }}
         >
-          ۹ دسته‌بندی مینیمال
+          Tatytoy
         </p>
       </div>
 
-      {/* Grid – دقیقاً داخل فضای باقی‌مانده */}
+      {/* Grid */}
       <div
         style={{
           flex: 1,
@@ -78,7 +66,7 @@ export default function HomePage() {
             width: '100%',
             maxWidth: '1100px',
             height: '100%',
-            gap: '16px', // فاصله کمتر
+            gap: '16px',
             justifyItems: 'center',
           }}
         >
@@ -94,7 +82,7 @@ export default function HomePage() {
                 textDecoration: 'none',
                 color: '#1d1d1f',
                 width: '100%',
-                height: '100%',      // ارتفاع دقیقاً از grid می‌آید
+                height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -113,21 +101,15 @@ export default function HomePage() {
                   borderRadius: '14px',
                   overflow: 'hidden',
                   flexShrink: 0,
+                  background: '#f5f5f7',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#86868b',
+                  fontSize: '0.75rem'
                 }}
               >
-                <img
-                  src={
-                    sectionImages[
-                      section.slug as keyof typeof sectionImages
-                    ] || '/placeholder.jpg'
-                  }
-                  alt={section.title}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                  }}
-                />
+                ...
               </div>
 
               <div>
@@ -136,19 +118,19 @@ export default function HomePage() {
                     fontSize: '1.05rem',
                     fontWeight: 600,
                     marginBottom: '2px',
-                    letterSpacing: '-0.01em',
+                    letterSpacing: '-0.01em'
                   }}
                 >
-                  {section.title}
+                  ...
                 </h3>
                 <p
                   style={{
                     fontSize: '0.85rem',
                     color: '#86868b',
-                    fontWeight: 500,
+                    fontWeight: 500
                   }}
                 >
-                  {section.products.length} محصول
+                  ... محصول
                 </p>
               </div>
             </Link>
@@ -166,14 +148,6 @@ export default function HomePage() {
           transform: translateY(-4px);
           box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
           border-color: rgba(0, 0, 0, 0.06);
-        }
-
-        .apple-card img {
-          transition: transform 0.25s ease-out;
-        }
-
-        .apple-card:hover img {
-          transform: scale(1.04);
         }
       `}</style>
     </div>
